@@ -1,0 +1,12 @@
+{
+  "scenes": [
+    { "id": "scene1", "seconds": 10, "audio": false },
+    { "id": "scene2", "seconds": 10, "audio": false },
+    { "id": "scene3", "seconds": 12, "audio": false },
+    { "id": "scene4", "seconds": 13, "audio": false },
+    { "id": "scene5", "seconds": 15, "audio": false },
+    { "id": "scene6", "seconds": 15, "audio": false },
+    { "id": "scene7", "seconds": 10, "audio": false },
+    { "id": "scene8", "seconds": 7, "audio": false }
+  ]
+}
