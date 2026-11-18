@@ -127,6 +127,9 @@ const EntryLabel: React.FC<{ e: Entry; small: boolean }> = ({ e, small }) => (
     }}
   >
     {e.key}
+    {e.value && !small ? (
+      <div style={{ fontSize: 20, color: colors.muted, marginTop: 4 }}>{e.value}</div>
+    ) : null}
     {e.mark ? (
       <span style={{ color: e.mark === "yes" ? colors.filled : colors.warn, marginLeft: 8 }}>
         {e.mark === "yes" ? "✓" : "✕"}
