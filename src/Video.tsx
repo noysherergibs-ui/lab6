@@ -2,9 +2,12 @@ import { AbsoluteFill, Audio, Series, staticFile } from "remotion";
 import timing from "./timing.json";
 import { colors, FPS } from "./theme";
 import { Placeholder } from "./scenes/Placeholder";
+import { Scene1Problem } from "./scenes/Scene1Problem";
 
 // Each scene lives in its own file. Swap a Placeholder for the real scene when it is built.
-const sceneComponents: Record<string, React.FC> = {};
+const sceneComponents: Record<string, React.FC> = {
+  scene1: Scene1Problem,
+};
 
 export const sceneFrames = (seconds: number) => Math.ceil(seconds * FPS);
 
