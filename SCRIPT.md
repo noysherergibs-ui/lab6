@@ -6,7 +6,7 @@ A short explainer video about how a hash map works: from the problem it solves, 
 
 | | |
 |---|---|
-| Length | about 90 seconds (8 scenes) |
+| Length | about 110 seconds (8 scenes; set by the Kokoro narration at normal speed) |
 | Resolution | 1920 × 1080, 30 fps |
 | Animation | Remotion (React), one component per scene |
 | Narration | Kokoro TTS (voice `af_heart` or `am_michael`), one audio file per scene |

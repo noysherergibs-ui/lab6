@@ -1,12 +1,44 @@
 {
   "scenes": [
-    { "id": "scene1", "seconds": 10, "audio": false },
-    { "id": "scene2", "seconds": 10, "audio": false },
-    { "id": "scene3", "seconds": 12, "audio": false },
-    { "id": "scene4", "seconds": 13, "audio": false },
-    { "id": "scene5", "seconds": 15, "audio": false },
-    { "id": "scene6", "seconds": 15, "audio": false },
-    { "id": "scene7", "seconds": 10, "audio": false },
-    { "id": "scene8", "seconds": 7, "audio": false }
+    {
+      "id": "scene1",
+      "seconds": 12.74,
+      "audio": true
+    },
+    {
+      "id": "scene2",
+      "seconds": 10.78,
+      "audio": true
+    },
+    {
+      "id": "scene3",
+      "seconds": 16.79,
+      "audio": true
+    },
+    {
+      "id": "scene4",
+      "seconds": 12.08,
+      "audio": true
+    },
+    {
+      "id": "scene5",
+      "seconds": 18.11,
+      "audio": true
+    },
+    {
+      "id": "scene6",
+      "seconds": 17.94,
+      "audio": true
+    },
+    {
+      "id": "scene7",
+      "seconds": 15.7,
+      "audio": true
+    },
+    {
+      "id": "scene8",
+      "seconds": 8.09,
+      "audio": true
+    }
   ]
 }
