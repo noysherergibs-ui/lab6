@@ -8,6 +8,7 @@ import { Scene3Hash } from "./scenes/Scene3Hash";
 import { Scene4PutGet } from "./scenes/Scene4PutGet";
 import { Scene5Collision } from "./scenes/Scene5Collision";
 import { Scene6Resize } from "./scenes/Scene6Resize";
+import { Scene7WhyItMatters } from "./scenes/Scene7WhyItMatters";
 
 // Each scene lives in its own file. Swap a Placeholder for the real scene when it is built.
 const sceneComponents: Record<string, React.FC> = {
@@ -17,6 +18,7 @@ const sceneComponents: Record<string, React.FC> = {
   scene4: Scene4PutGet,
   scene5: Scene5Collision,
   scene6: Scene6Resize,
+  scene7: Scene7WhyItMatters,
 };
 
 export const sceneFrames = (seconds: number) => Math.ceil(seconds * FPS);
