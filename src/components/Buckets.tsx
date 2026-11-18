@@ -125,7 +125,7 @@ const EntryLabel: React.FC<{ e: Entry; small: boolean }> = ({ e, small }) => (
   <div
     style={{
       fontFamily: fonts.mono,
-      fontSize: small ? 18 : 28,
+      fontSize: small ? 20 : 28,
       color: colors.key,
       opacity: e.dim ? 0.4 : 1,
       textAlign: "center",
