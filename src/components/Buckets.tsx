@@ -82,9 +82,11 @@ export const Buckets: React.FC<Props> = ({
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
+                position: "relative",
               }}
             >
               {chain[0] ? <EntryLabel e={chain[0]} small={small} /> : null}
+              {chain[0]?.mark ? <MarkBadge mark={chain[0].mark} /> : null}
             </div>
             {/* chained entries hang below */}
             {chain.slice(1).map((e) => (
@@ -95,7 +97,10 @@ export const Buckets: React.FC<Props> = ({
                 </svg>
                 <div
                   style={{
-                    height: small ? 40 : 60,
+                    minHeight: small ? 40 : 60,
+                    padding: small ? "2px 0" : "6px 0",
+                    boxSizing: "border-box",
+                    position: "relative",
                     borderRadius: 10,
                     border: `3px solid ${colors.filled}`,
                     backgroundColor: "rgba(20,184,166,0.15)",
@@ -105,6 +110,7 @@ export const Buckets: React.FC<Props> = ({
                   }}
                 >
                   <EntryLabel e={e} small={small} />
+                  {e.mark ? <MarkBadge mark={e.mark} /> : null}
                 </div>
               </div>
             ))}
@@ -130,10 +136,29 @@ const EntryLabel: React.FC<{ e: Entry; small: boolean }> = ({ e, small }) => (
     {e.value && !small ? (
       <div style={{ fontSize: 20, color: colors.muted, marginTop: 4 }}>{e.value}</div>
     ) : null}
-    {e.mark ? (
-      <span style={{ color: e.mark === "yes" ? colors.filled : colors.warn, marginLeft: 8 }}>
-        {e.mark === "yes" ? "✓" : "✕"}
-      </span>
-    ) : null}
+  </div>
+);
+
+// Check / cross badge on the top-right corner of an entry.
+const MarkBadge: React.FC<{ mark: "yes" | "no" }> = ({ mark }) => (
+  <div
+    style={{
+      position: "absolute",
+      top: -16,
+      right: -16,
+      width: 38,
+      height: 38,
+      borderRadius: 19,
+      backgroundColor: mark === "yes" ? colors.filled : colors.warn,
+      color: colors.bg,
+      fontSize: 26,
+      fontWeight: 800,
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center",
+      fontFamily: fonts.sans,
+    }}
+  >
+    {mark === "yes" ? "✓" : "✕"}
   </div>
 );
